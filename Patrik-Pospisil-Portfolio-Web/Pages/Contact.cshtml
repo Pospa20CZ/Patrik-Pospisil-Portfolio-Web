@@ -1,0 +1,35 @@
+﻿@page
+@model Patrik_Pospisil_Portfolio_Web.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Me";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Message.Name"></label><br />
+        <input asp-for="Message.Name" />
+        <span asp-validation-for="Message.Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Message.Email"></label><br />
+        <input asp-for="Message.Email" />
+        <span asp-validation-for="Message.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Message.Content"></label><br />
+        <textarea asp-for="Message.Content" rows="5"></textarea>
+        <span asp-validation-for="Message.Content" class="text-danger"></span>
+    </div>
+    <button type="submit">Send</button>
+</form>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

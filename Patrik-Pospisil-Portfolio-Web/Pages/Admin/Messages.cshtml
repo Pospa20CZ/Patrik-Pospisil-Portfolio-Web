@@ -1,0 +1,42 @@
+﻿@page
+@model Patrik_Pospisil_Portfolio_Web.Pages.MessagesModel
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<h1>Messages</h1>
+
+@if (Model.Messages.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Date Sent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model.Messages)
+            {
+                <tr>
+                    <td>@message.Name</td>
+                    <td>@message.Email</td>
+                    <td>@message.Content</td>
+                    <td>@message.DateSent.ToString("g")</td>
+                    <td>
+                        <a asp-page="/DeleteMessage" asp-route-id="@message.Id" class="btn btn-danger btn-sm">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No messages found.</p>
+}
