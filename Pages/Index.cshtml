@@ -1,15 +1,17 @@
 ﻿@page
-@model IndexModel
+@model Patrik_Pospisil_Portfolio_Web.Pages.IndexModel
 @{
     ViewData["Title"] = "Welcome";
 }
 
-<h1>Hi, I'm Patrik Pospisil</h1>
-<p>I'm an aspiring Junior Web Developer and Software Tester with a passion for learning and creating modern applications.</p>
+<div class="text-center">
+    <h1 class="display-4">Welcome to My Portfolio</h1>
+    <p class="lead">Hi, I'm Patrik Pospíšil — aspiring C# developer and software tester.</p>
 
-<p>
-    🔗 <a href="https://github.com/Pospa20CZ" target="_blank">GitHub</a><br>
-    💼 <a href="https://www.linkedin.com/in/patrikpospisil20" target="_blank">LinkedIn</a>
-</p>
+    <p>On this website, you can learn more about me, my projects, and how to contact me.</p>
 
-<p><a class="btn btn-primary" href="/Contact">Contact Me</a></p>
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg" asp-page="/Contact">Contact Me</a>
+        <a class="btn btn-secondary btn-lg" asp-page="/Messages">View Messages</a>
+    </div>
+</div>

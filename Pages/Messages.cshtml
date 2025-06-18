@@ -4,39 +4,41 @@
     ViewData["Title"] = "Messages";
 }
 
-<h1>Messages</h1>
+<div class="container mt-4">
+    <h2 class="text-primary mb-4">@ViewData["Title"]</h2>
 
-@if (Model.Messages.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Content</th>
-                <th>Date Sent</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var message in Model.Messages)
-            {
+    @if (Model.Messages.Any())
+    {
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-light">
                 <tr>
-                    <td>@message.Name</td>
-                    <td>@message.Email</td>
-                    <td>@message.Content</td>
-                    <td>@message.DateSent.ToString("dd.MM.yyyy HH:mm")</td>
-                    <td>
-                        <a asp-page="/DeleteMessage" asp-route-id="@message.Id" class="btn btn-danger btn-sm">
-                            Delete
-                        </a>
-                    </td>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Content</th>
+                    <th>Date Sent</th>
+                    <th>Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>No messages found.</p>
-}
+            </thead>
+            <tbody>
+                @foreach (var message in Model.Messages)
+                {
+                    <tr>
+                        <td>@message.Name</td>
+                        <td>@message.Email</td>
+                        <td>@message.Content</td>
+                        <td>@message.DateSent.ToString("dd.MM.yyyy HH:mm")</td>
+                        <td>
+                            <a asp-page="/DeleteMessage" asp-route-id="@message.Id" class="btn btn-sm btn-outline-danger">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">No messages found.</div>
+    }
+</div>
