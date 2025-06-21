@@ -1,7 +1,15 @@
 ﻿@page
 @model Patrik_Pospisil_Portfolio_Web.Pages.MessagesModel
+@inject IConfiguration Configuration
+
 @{
     ViewData["Title"] = "Messages";
+    var isAdmin = Configuration.GetValue<bool>("Admin:IsEnabled");
+
+    if (!isAdmin)
+    {
+        HttpContext.Response.Redirect("/Index");
+    }
 }
 
 <div class="container mt-4">

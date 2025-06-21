@@ -1,17 +1,46 @@
 ﻿@page
-@model Patrik_Pospisil_Portfolio_Web.Pages.IndexModel
+@model IndexModel
 @{
-    ViewData["Title"] = "Welcome";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to My Portfolio</h1>
-    <p class="lead">Hi, I'm Patrik Pospíšil — aspiring C# developer and software tester.</p>
-
-    <p>On this website, you can learn more about me, my projects, and how to contact me.</p>
-
-    <div class="mt-4">
-        <a class="btn btn-primary btn-lg" asp-page="/Contact">Contact Me</a>
-        <a class="btn btn-secondary btn-lg" asp-page="/Messages">View Messages</a>
+<header class="py-5">
+    <div class="container px-5 pb-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-xxl-5">
+                <!-- Hero Text -->
+                <div class="text-center text-xxl-start">
+                    <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+                        <div class="text-uppercase">Developer in progress</div>
+                    </div>
+                    <div class="fs-3 fw-light text-muted">
+                        After years in People &amp; Culture, I'm now building my second career in IT.
+                    </div>
+                    <h1 class="display-6 fw-normal text-dark mb-4">
+                        I enjoy learning new technologies, writing clean code in C#, and solving real-world problems with practical solutions.
+                    </h1>
+                    <div class="fs-5 fw-semibold text-gradient d-inline">
+                        Let’s code the future — with purpose and passion.
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-5">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" asp-page="/Resume">Resume</a>
+                        <a class="btn btn-outline-dark btn-lg px-4" asp-page="/Projects">Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-7">
+                <!-- Profile image -->
+                <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                    <div class="profile bg-gradient-primary-to-secondary">
+                        <img class="profile-img" src="/assets/Patrik.jpg" alt="Patrik Pospisil profile photo" />
+                        <div class="dots-1"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="2" cy="2" r="2"></circle></svg></div>
+                        <div class="dots-2"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="2" cy="2" r="2"></circle></svg></div>
+                        <div class="dots-3"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="2" cy="2" r="2"></circle></svg></div>
+                        <div class="dots-4"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="2" cy="2" r="2"></circle></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</header>
