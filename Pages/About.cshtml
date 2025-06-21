@@ -1,17 +1,35 @@
 ﻿@page
 @model AboutModel
 @{
-    ViewData["Title"] = "About Me";
+    ViewData["Title"] = "About";
 }
 
-<h1>About Me</h1>
+<section class="py-5">
+    <div class="container px-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bolder">About Me</h1>
+            <p class="lead fw-normal text-muted mb-0">Let me introduce myself</p>
+        </div>
 
-<p>
-    My name is Patrik Pospisil. I am an enthusiastic learner who completed online courses in Python and C#.
-</p>
-<p>
-    Although I haven’t worked in the IT industry yet, I am fully motivated to grow and gain real-world experience as a Junior Developer or Software Tester.
-</p>
-<p>
-    I enjoy learning new technologies, building practical projects, and collaborating with others.
-</p>
+        <div class="card shadow border-0 rounded-4 mb-5">
+            <div class="card-body p-5">
+                <div class="row gx-5">
+                    <div class="col-lg-12">
+                        <p class="mb-4">
+                            Hi, I'm Patrik – a motivated career changer with a strong background in People Solutions and international communication.
+                            After several years in HR roles at Johnson & Johnson and Kenvue, I've decided to follow my passion for technology and software development.
+                        </p>
+                        <p class="mb-4">
+                            I've completed certified online courses in Python and C#, and I'm now focused on building practical web applications using ASP.NET Core and Razor Pages.
+                            I'm actively expanding my knowledge in databases, testing, and clean code principles.
+                        </p>
+                        <p class="mb-0">
+                            I’m currently seeking an entry-level opportunity as a Junior Developer or Software Tester where I can apply my skills,
+                            learn from experienced colleagues, and contribute with responsibility, curiosity, and a strong work ethic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
